@@ -1,0 +1,22 @@
+CREATE DATABASE Practice
+ON
+PRIMARY
+	( NAME = N'Practice', 
+	FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\Practice.mdf',
+	SIZE = 100MB,
+	MAXSIZE = UNLIMITED,
+	FILEGROWTH = 1MB ),
+FILEGROUP SECONDARY
+	( NAME = N'Practice_act', 
+	FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\Practice_act.ndf',
+	SIZE = 100MB,
+	MAXSIZE = UNLIMITED,
+	FILEGROWTH = 1MB)
+LOG ON
+	( NAME = N'Practice_log',
+	FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\Practice_log.ldf',
+	SIZE = 10MB,
+	MAXSIZE = 20MB,
+	FILEGROWTH = 10%)
+COLLATE SQL_Latin1_General_CP1_CI_AS
+GO
